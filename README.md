@@ -38,10 +38,15 @@ promiseForData
   .then(json => console.log(json)
 ```
 
-## Tasks
+If we send a request to an API that returns text instead of json, we'll need to use the `.text` method on the Response object, instead of the `.json` method.
 
+```
+promiseForData
+  .then(response => response.text())
+  .then(text => console.log(text)
+```
 
-*SPACE STATION*
+## SPACE STATION
 
 API Documentation for the ISS API is at [http://open-notify.org/Open-Notify-API/](http://open-notify.org/Open-Notify-API/)
 
@@ -58,7 +63,7 @@ API Documentation for the ISS API is at [http://open-notify.org/Open-Notify-API/
 - When the page loads, fetch the people who are currently in space.
 - Show their names on the screen
 
-*NERDY NUMBERS*
+## NERDY NUMBERS
 
 The [Numbers API](http://numbersapi.com/) is, in their words
 
@@ -84,7 +89,7 @@ Let's nerd out.
 
 4. All the numbers
 - Add a button 'All the Numbers'
-- When clicked, it should fetch facts for one hundred random numbers
+- When clicked, it should fetch facts for one hundred numbers
 - And show them on the screen
 
 🔢🤓🔢🤓🔢🤓🔢🤓🔢🤓🔢🤓🔢🤓🔢🤓🔢🤓🔢🤓🔢🤓
